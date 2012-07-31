@@ -49,3 +49,4 @@ alias gsu='git submodule update'
 alias rgla='rake git:pull:all'
 alias rgpa='rake git:push:all'
 alias st='nocorrect stree'
+eval "$(rbenv init -)"
