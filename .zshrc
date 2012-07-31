@@ -28,7 +28,6 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git rails3 rake ruby bundler brew macports osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
-source /sw/bin/init.sh
 
 # Customize to your needs...
 export MYSQL_HOME=/usr/local/mysql
