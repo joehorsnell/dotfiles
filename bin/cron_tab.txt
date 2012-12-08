@@ -1,0 +1,1 @@
+11 * * * * ~/bin/umbrella_fetch_all.sh > ~/tmp/cron-um.log 2>&1

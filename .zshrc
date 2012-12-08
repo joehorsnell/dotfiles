@@ -25,17 +25,17 @@ COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git rbenv bundler rake brew macports osx vagrant)
+plugins=(git rbenv gem bundler rake brew macports osx vagrant)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 export MYSQL_HOME=/usr/local/mysql
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
-export PATH=/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:$PATH
+export PATH=/usr/local/share/python:/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
-export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
-export BANCO=~/Work/github/firstbanco
+#export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
+export BANCO=~/code/gh/firstbanco
 source ~/.aws_env
 source ~/.opscode_env
 
@@ -49,4 +49,5 @@ alias gsu='git submodule update'
 alias rgla='rake git:pull:all'
 alias rgpa='rake git:push:all'
 alias st='nocorrect stree'
+alias pwgen='nocorrect pwgen'
 eval "$(rbenv init -)"
