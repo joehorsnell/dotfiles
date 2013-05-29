@@ -38,6 +38,7 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 export BANCO=~/code/gh/firstbanco
 export EDITOR=vim
 source ~/.aws_env
+source ~/.aws_cred
 source ~/.opscode_env
 
 alias h=history

@@ -1,0 +1,4 @@
+export EC2_HOME=~/Work/ec2/ec2-api-tools-1.5.2.4
+export EC2_URL=https://eu-west-1.ec2.amazonaws.com
+export RDS_URL=https://rds.eu-west-1.amazonaws.com
+export EC2_REGION=eu-west-1
