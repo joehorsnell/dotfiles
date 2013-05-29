@@ -36,6 +36,7 @@ export PATH=/usr/local/share/python:/usr/local/bin:/opt/local/bin:/usr/local/sbi
 export PATH="$HOME/.rbenv/bin:$PATH"
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 export BANCO=~/code/gh/firstbanco
+export EDITOR=vim
 source ~/.aws_env
 source ~/.opscode_env
 
