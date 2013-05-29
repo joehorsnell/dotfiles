@@ -42,6 +42,17 @@ source ~/.aws_cred
 source ~/.opscode_env
 
 alias h=history
+alias z=zeus
+alias zg='z generate'
+alias zgm='zg migration'
+alias zst='z start'
+alias zs='z spec'
+alias zss='z spec spec'
+alias zr='zeus rake'
+alias zrdm='zr db:migrate'
+alias zrdms='zr db:migrate:status'
+alias zrdr='zr db:rollback'
+alias zrdtp='zr db:test:prepare'
 alias lt='ll -tr'
 alias netstat_osx="sudo lsof -i -P"
 alias fb='cd $BANCO'
