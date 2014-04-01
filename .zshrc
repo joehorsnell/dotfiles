@@ -58,6 +58,7 @@ export ANACONDA_HOME=$HOME/anaconda
 export MYSQL_HOME=/usr/local/mysql
 export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
 export GOPATH=$HOME/code/go
+export RBENV_ROOT=/usr/local/var/rbenv
 export PATH=/usr/local/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$GOPATH/bin:$PATH:$ANACONDA_HOME/bin"
@@ -111,5 +112,5 @@ alias st='nocorrect stree'
 alias pwgen='nocorrect pwgen'
 alias rg='g checkout Gemfile.lock db/schema.rb'
 alias tc='truecrypt -t'
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
