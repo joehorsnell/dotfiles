@@ -65,6 +65,7 @@ export PATH="$HOME/.rbenv/bin:$GOPATH/bin:$PATH:$ANACONDA_HOME/bin"
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 export BANCO=~/code/gh/firstbanco
 export EDITOR=vim
+export PASSWORD_STORE_DIR=.
 #source ~/.aws_env
 #source ~/.aws_cred
 #source ~/.opscode_env
