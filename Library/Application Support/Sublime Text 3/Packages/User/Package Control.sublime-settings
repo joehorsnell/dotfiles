@@ -1,0 +1,13 @@
+{
+	"installed_packages":
+	[
+		"Git",
+		"Git Config",
+		"GitStatus",
+		"RubyTest",
+		"RubyToggleString",
+		"SideBarGit",
+		"SublimeGit",
+		"SyncedSideBar"
+	]
+}
