@@ -1,5 +1,7 @@
 #!/bin/zsh
-# Script to make a call using Vostron via HTTP
+# Script to make a Vostron call request via HTTP.
+# Note: This script uses httpie (http://httpie.org) as it has a simple syntax for headers
+# and cookies, although it should be trivial to adapt it to use curl or similar.
 
 # Show usage if no arguments are provided
 if [[ $# -eq 0 ]] ; then
@@ -12,6 +14,12 @@ if [[ $# -eq 0 ]] ; then
     echo '  VOSTRON_PASSWORD       - Your web password'
     exit 0
 fi
+
+# Change this to use a different command to make the call, such as curl
+http_command='http'
+
+# Check that required command is installed
+command -v $http_command >/dev/null 2>&1 || { echo >&2 "Please install $http_command."; exit 1 }
 
 # If no second argument is provided, then we required the number to call first to be
 # supplied via an environment variable.
@@ -29,4 +37,4 @@ cookie='Cookie:_username='$VOSTRON_USERNAME'; _password='$VOSTRON_PASSWORD' ; _p
 
 echo "Calling" $number_to_call_first "first, then calling"  $number_to_call_when_answered "when answered"
 
-http https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call $cookie
+$http_command https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call $cookie
