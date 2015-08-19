@@ -37,4 +37,4 @@ cookie='Cookie:_username='$VOSTRON_USERNAME'; _password='$VOSTRON_PASSWORD' ; _p
 
 echo "Calling" $number_to_call_first "first, then calling"  $number_to_call_when_answered "when answered"
 
-$http_command https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call $cookie
+$http_command https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call $cookie > /dev/null
