@@ -68,6 +68,8 @@ export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH:$ANACONDA_HO
 export BANCO=~/code/gh/firstbanco
 export EDITOR=vim
 export PASSWORD_STORE_DIR=.
+# timeout is in ms (10_000_000)
+export PGOPTIONS="-c statement_timeout=10000000"
 #source ~/.aws_env
 #source ~/.aws_cred
 #source ~/.opscode_env
