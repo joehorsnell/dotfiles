@@ -71,6 +71,7 @@ export PASSWORD_STORE_DIR=.
 #source ~/.aws_env
 #source ~/.aws_cred
 #source ~/.opscode_env
+mkdir -p ~/.ssh/sockets
 
 alias h=history
 
