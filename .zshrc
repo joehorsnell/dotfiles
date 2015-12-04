@@ -13,7 +13,7 @@ ZSH_THEME="intheloop"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -56,7 +56,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export ANACONDA_HOME=$HOME/anaconda
 export MYSQL_HOME=/usr/local/mysql
-export JAVA_HOME=/System/Library/Frameworks/JavaVM.framework/Versions/CurrentJDK/Home
+export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/Contents/Home/
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/
+export JAVA_HOME=$JAVA_8_HOME
 export GOPATH=$HOME/code/go
 export RBENV_ROOT=/usr/local/var/rbenv
 export PATH=/usr/local/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
