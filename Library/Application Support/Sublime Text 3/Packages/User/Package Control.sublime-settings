@@ -9,9 +9,11 @@
 		"Git Config",
 		"Indent XML",
 		"Package Control",
+		"RuboCop",
 		"RubyTest",
 		"RubyToggleString",
-		"SideBarGit",
-		"SyncedSideBar"
+		"SublimeGit",
+		"SyncedSideBar",
+		"Zen Tabs"
 	]
 }

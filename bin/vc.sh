@@ -16,7 +16,8 @@ if [[ $# -eq 0 ]] ; then
 fi
 
 # Change this to use a different command to make the call, such as curl
-http_command='http'
+# http_command='http'
+http_command='curl'
 
 # Check that required command is installed
 command -v $http_command >/dev/null 2>&1 || { echo >&2 "Please install $http_command."; exit 1 }
@@ -33,8 +34,10 @@ fi
 
 number_to_call_when_answered=$1
 number_to_call_first=${2-$VOSTRON_DEFAULT_NUMBER}
-cookie='Cookie:_username='$VOSTRON_USERNAME'; _password='$VOSTRON_PASSWORD' ; _pages=reset'
+# This is the format for httpie: cookie='Cookie:_username='$VOSTRON_USERNAME'; _password='$VOSTRON_PASSWORD' ; _pages=reset'
+cookie='_username='$VOSTRON_USERNAME'; _password='$VOSTRON_PASSWORD' ; _pages=reset'
 
 echo "Calling" $number_to_call_first "first, then calling"  $number_to_call_when_answered "when answered"
 
-$http_command https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call $cookie > /dev/null
+# Command when using httpie: $http_command https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call $cookie > /dev/null
+$http_command https://sip.vostron.net/actions/call/save/\?stype\=\&phone\=$VOSTRON_SIP_USERNAME\&snumber\=$number_to_call_first\&cnumber\=$number_to_call_when_answered\&callerid1\=\&callerid2\=\&answer1\=0\&submit\=Call --silent --cookie $cookie > /dev/null
