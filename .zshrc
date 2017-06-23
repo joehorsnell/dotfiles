@@ -60,8 +60,8 @@ SAVEHIST=10000000
 # Customize to your needs...
 export ANACONDA_HOME=$HOME/anaconda
 export MYSQL_HOME=/usr/local/mysql
-export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_76.jdk/Contents/Home/
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/
+export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/
+export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/
 export JAVA_HOME=$JAVA_8_HOME
 export GOPATH=$HOME/code/go
 export RBENV_ROOT=/usr/local/var/rbenv
@@ -72,6 +72,7 @@ export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH:$ANACONDA_HO
 export BANCO=~/code/gh/firstbanco
 export EDITOR=vim
 export PASSWORD_STORE_DIR=.
+source ~/.vostron.env
 #source ~/.aws_env
 #source ~/.aws_cred
 #source ~/.opscode_env
@@ -125,3 +126,17 @@ alias tc='truecrypt -t'
 alias igrep='grep -i'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
+zmodload zsh/complist
+autoload -U compinit
+compinit -u
+autoload -U colors
+colors
+zstyle ':completion:*' show-ambiguity "1;$color[fg-red]"
+
+PATH="/Users/joe/perl5/bin${PATH+:}${PATH}"; export PATH;
+PERL5LIB="/Users/joe/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/Users/joe/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/Users/joe/perl5\""; export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
