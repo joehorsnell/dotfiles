@@ -31,6 +31,9 @@ plugins=(ssh-agent git rbenv gem bundler rake brew osx vagrant gpg-agent pass)
 
 source $ZSH/oh-my-zsh.sh
 
+HISTSIZE=10000000
+SAVEHIST=10000000
+
 # gpg-agent
 #local GPG_ENV=$HOME/.gnupg/gpg-agent.env
 #function start_agent {
