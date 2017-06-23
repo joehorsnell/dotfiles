@@ -33,6 +33,7 @@ source $ZSH/oh-my-zsh.sh
 
 HISTSIZE=10000000
 SAVEHIST=10000000
+HISTFILE=~/Dropbox/dev/backup/.zsh_history.$HOST
 
 # gpg-agent
 #local GPG_ENV=$HOME/.gnupg/gpg-agent.env
