@@ -72,6 +72,12 @@ export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH:$ANACONDA_HO
 export BANCO=~/code/gh/firstbanco
 export EDITOR=vim
 export PASSWORD_STORE_DIR=.
+export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew-github-access-token)
+
+# timeout is in ms (10_000_000)
+export PGOPTIONS="-c statement_timeout=10000000"
+export PROD_DEPLOYS=~/Dropbox\ \(First\ Banco\ Limited\)/Dept\ Development/Production\ Deploys/
+
 source ~/.vostron.env
 #source ~/.aws_env
 #source ~/.aws_cred
