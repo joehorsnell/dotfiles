@@ -73,7 +73,9 @@ export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH:$ANACONDA_HO
 export BANCO=~/code/gh/firstbanco
 export EDITOR=vim
 export PASSWORD_STORE_DIR=.
-export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew-github-access-token)
+if [[ -f "$1" ]]; then
+  export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew-github-access-token)
+fi
 
 # timeout is in ms (10_000_000)
 export PGOPTIONS="-c statement_timeout=10000000"
