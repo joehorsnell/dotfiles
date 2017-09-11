@@ -130,7 +130,6 @@ alias rgla='rake git:pull:all'
 alias rgpa='rake git:push:all'
 alias st='nocorrect stree'
 alias pwgen='nocorrect pwgen'
-alias rg='g checkout Gemfile.lock db/schema.rb'
 alias tc='truecrypt -t'
 alias igrep='grep -i'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
