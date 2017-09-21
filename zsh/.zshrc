@@ -56,6 +56,10 @@ COMPLETION_WAITING_DOTS="true"
 # plugins=(git rbenv gem bundler rake brew osx vagrant gpg-agent pass)
 plugins=(git rbenv gem bundler rake brew osx vagrant pass)
 
+source_file_if_exists () {
+    [[ -f "$1" ]] && source "$1"
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -121,7 +125,7 @@ fi
 export PGOPTIONS="-c statement_timeout=10000000"
 export PROD_DEPLOYS=~/Dropbox\ \(First\ Banco\ Limited\)/Dept\ Development/Production\ Deploys/
 
-source ~/.vostron.env
+source_file_if_exists ~/.vostron.env
 #source ~/.aws_env
 #source ~/.aws_cred
 #source ~/.opscode_env
