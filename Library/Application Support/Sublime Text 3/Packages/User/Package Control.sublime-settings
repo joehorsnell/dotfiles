@@ -5,6 +5,7 @@
 	],
 	"installed_packages":
 	[
+		"BeautifyRuby",
 		"Git",
 		"Git Config",
 		"Indent XML",
@@ -13,6 +14,8 @@
 		"RubyTest",
 		"RubyToggleString",
 		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-rubocop",
 		"SyncedSideBar",
 		"Zen Tabs"
 	]
