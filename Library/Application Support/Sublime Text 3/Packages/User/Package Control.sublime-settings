@@ -2,11 +2,10 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"GitSavvy",
-		"RubyTest"
 	],
 	"installed_packages":
 	[
+		"BeautifyRuby",
 		"Git",
 		"Git Config",
 		"GitSavvy",
@@ -16,6 +15,8 @@
 		"RubyTest",
 		"RubyToggleString",
 		"SublimeGit",
+		"SublimeLinter",
+		"SublimeLinter-rubocop",
 		"SyncedSideBar",
 		"Zen Tabs"
 	]
