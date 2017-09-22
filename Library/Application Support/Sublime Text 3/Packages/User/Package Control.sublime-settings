@@ -2,11 +2,14 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
+		"GitSavvy",
+		"RubyTest"
 	],
 	"installed_packages":
 	[
 		"Git",
 		"Git Config",
+		"GitSavvy",
 		"Indent XML",
 		"Package Control",
 		"RuboCop",
