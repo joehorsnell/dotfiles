@@ -176,6 +176,10 @@ alias st='nocorrect stree'
 alias pwgen='nocorrect pwgen'
 alias tc='truecrypt -t'
 alias igrep='grep -i'
+# Juzl's fzf/git aliases
+alias fbr='git branch -a | fzf | sed "s/*//"'
+alias fbc='fbr | pbcopy'
+alias fco='fbr | xargs git checkout'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 zmodload zsh/complist
