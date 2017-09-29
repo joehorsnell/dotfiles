@@ -197,3 +197,4 @@ PERL_MB_OPT="--install_base \"/Users/joe/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/.bamboorc ] && source ~/.bamboorc
