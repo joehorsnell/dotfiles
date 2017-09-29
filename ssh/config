@@ -6,20 +6,3 @@ Host *
   AddKeysToAgent yes
   UseKeychain yes
   ServerAliveInterval 60
-
-Host *.test.firstbanco.com
-  IdentityFile ~/.ssh/id_rsa_bancobot
-  User bancobot
-
-Host bastion.*.bancodev.org
-  User bancobot
-  IdentityFile ~/.ssh/id_rsa_bancobot
-  ForwardAgent yes
-
-Host *.compute.amazonaws.com
-  IdentityFile ~/.ssh/id_rsa_bancobot
-  User bancobot
-
-Host *.compute.amazonaws.com
-  IdentityFile ~/.ssh/banco-ec2-non-prod.pem
-  User ec2-user
