@@ -125,7 +125,7 @@ fi
 # timeout is in ms (10_000_000)
 export PGOPTIONS="-c statement_timeout=10000000"
 # The long form of -FXR
-export LESS=--quit-if-one-screen --no-init --RAW-CONTROL-CHARS
+export LESS='--quit-if-one-screen --no-init --RAW-CONTROL-CHARS'
 export PROD_DEPLOYS=~/Dropbox\ \(First\ Banco\ Limited\)/Dept\ Development/Production\ Deploys/
 
 source_file_if_exists ~/.vostron.env
