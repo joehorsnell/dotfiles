@@ -53,8 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git rbenv gem bundler rake brew osx vagrant gpg-agent pass)
-plugins=(git rbenv gem bundler rake brew osx vagrant pass)
+plugins=(git rbenv gem bundler rake brew osx vagrant gpg-agent pass)
 
 source_file_if_exists () {
     [[ -f "$1" ]] && source "$1"
