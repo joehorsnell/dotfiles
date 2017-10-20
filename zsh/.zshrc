@@ -53,7 +53,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rbenv gem bundler rake brew osx vagrant gpg-agent pass)
+plugins=(git gem bundler rake brew osx vagrant gpg-agent pass)
 
 source_file_if_exists () {
     [[ -f "$1" ]] && source "$1"
@@ -109,7 +109,6 @@ export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Ho
 export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/
 export JAVA_HOME=$JAVA_8_HOME
 export GOPATH=$HOME/code/go
-export RBENV_ROOT=/usr/local/var/rbenv
 export PATH=/usr/local/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH:$ANACONDA_HOME/bin"
