@@ -1,0 +1,77 @@
+# Core
+cask 'dropbox'
+cask '1password'
+cask 'alfred'
+cask 'google-chrome'
+cask 'firefox'
+
+# Development
+cask 'iterm2'
+cask 'sublime-text'
+cask 'visual-studio-code'
+cask 'atom'
+cask 'beyond-compare'
+cask 'dash'
+cask 'sourcetree'
+cask 'intellij-idea'
+cask 'dbeaver-community'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'virtualbox-extension-pack'
+cask 'docker'
+cask 'docker-toolbox'
+cask 'java'
+cask 'java6'
+cask 'wireshark'
+
+# Utilities
+cask 'daisydisk'
+cask 'istat-menus'
+cask 'keka'
+cask 'cryptomator'
+cask 'cyberduck'
+cask 'disk-inventory-x'
+# Mainly because of the screenshot capability
+cask 'skitch'
+cask 'flux'
+
+# Work
+cask 'slack'
+cask 'microsoft-office'
+cask 'amazon-workdocs'
+cask 'amazon-workspaces'
+
+# Review
+# cask 'diffmerge'
+# cask 'p4merge'
+# cask 'bitbar'
+# cask 'caffeine'
+# cask 'xquartz'
+# cask 'evernote'
+# cask 'gimp'
+# cask 'gitkraken'
+# cask 'gitup'
+# cask 'ngrok'
+# cask 'pdftotext'
+# cask 'pgadmin3'
+# cask 'powershell'
+# cask 'remember-the-milk'
+
+# Redundant
+# cask 'whatsdesktop'
+# cask 'nordvpn'
+# cask 'wkhtmltopdf'
+# cask 'netspot'
+# cask 'soapui'
+# cask 'skype'
+# cask 'spideroakone'
+# cask 'tunnelblick'
+# cask 'trim-enabler'
+# cask 'omnidisksweeper'
+# cask 'mou'
+# cask 'silverlight'
+# cask 'macx-youtube-downloader'
+# cask 'sublime-text3'
+# cask 'java7' # Java 7 removed now from Homebrew as it's behind an Oracle login (the java 6 one is the Apple Java)
+# cask 'java8'
+# cask 'iterm2-beta' # Can't install iterm2 and iterm2-beta at the same time as they install to the same location
