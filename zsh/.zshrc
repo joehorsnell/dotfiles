@@ -59,6 +59,17 @@ source_file_if_exists () {
     [[ -f "$1" ]] && source "$1"
 }
 
+function ze () {
+	zeus $@
+	if [ $? -eq 143 ]
+	then
+	  reset
+	  echo ‘########################################################’
+	  echo ‘Caught a zeus error, reset terminal and now retrying...’
+	  ze $@
+	fi
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
