@@ -45,6 +45,7 @@ brew "pwgen"
 brew "p7zip"
 brew "mitmproxy"
 brew "jq"
+brew "xsv"
 
 # Personal
 brew "youtube-dl"
