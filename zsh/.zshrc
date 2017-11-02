@@ -158,6 +158,9 @@ alias zrdms='zr db:migrate:status'
 alias zrdr='zr db:rollback'
 alias zrdtp='zr db:test:prepare'
 
+# Tig
+alias ts='tig status'
+
 # Spring
 alias s=spring
 alias sg='s generate'
