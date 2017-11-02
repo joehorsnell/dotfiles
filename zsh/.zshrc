@@ -146,7 +146,7 @@ mkdir -p ~/.ssh/sockets
 alias h=history
 
 # Zeus
-alias z=zeus
+alias z=ze
 alias zg='z generate'
 alias zgm='zg migration'
 alias zst='z start'
