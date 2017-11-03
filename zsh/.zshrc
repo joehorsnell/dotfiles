@@ -135,7 +135,7 @@ fi
 export PGOPTIONS="-c statement_timeout=10000000"
 # The long form of -FXR
 export LESS='--quit-if-one-screen --no-init --RAW-CONTROL-CHARS'
-export PROD_DEPLOYS=~/Dropbox\ \(First\ Banco\ Limited\)/Dept\ Development/Production\ Deploys/
+export PROD_DEPLOYS=~/Dropbox\ \(Bamboo\ Limited\)/Dept\ Development/Production\ Deploys/
 
 source_file_if_exists ~/.vostron.env
 #source ~/.aws_env
