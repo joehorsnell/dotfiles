@@ -146,7 +146,7 @@ mkdir -p ~/.ssh/sockets
 alias h=history
 
 # Zeus
-alias z=zeus
+alias z=ze
 alias zg='z generate'
 alias zgm='zg migration'
 alias zst='z start'
@@ -157,6 +157,9 @@ alias zrdm='zr db:migrate'
 alias zrdms='zr db:migrate:status'
 alias zrdr='zr db:rollback'
 alias zrdtp='zr db:test:prepare'
+
+# Tig
+alias ts='tig status'
 
 # Spring
 alias s=spring
