@@ -34,6 +34,8 @@ cask 'disk-inventory-x'
 # Mainly because of the screenshot capability
 cask 'skitch'
 cask 'flux'
+cask 'sizeup'
+cask 'gimp'
 
 # Work
 cask 'slack'
@@ -48,7 +50,6 @@ cask 'amazon-workspaces'
 # cask 'caffeine'
 # cask 'xquartz'
 # cask 'evernote'
-# cask 'gimp'
 # cask 'gitkraken'
 # cask 'gitup'
 # cask 'ngrok'
