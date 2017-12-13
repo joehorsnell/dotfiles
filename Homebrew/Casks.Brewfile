@@ -25,6 +25,8 @@ cask 'java6'
 cask 'wireshark'
 
 # Utilities
+cask 'karabiner'
+cask 'karabiner-elements'
 cask 'daisydisk'
 cask 'istat-menus'
 cask 'keka'
