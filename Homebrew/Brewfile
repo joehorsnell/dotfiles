@@ -12,6 +12,7 @@ brew "ripgrep"
 brew "ack"
 brew "the_platinum_searcher"
 brew "the_silver_searcher"
+brew "fd"
 
 brew "rbenv"
 brew "ruby-build"
