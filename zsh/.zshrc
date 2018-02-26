@@ -204,6 +204,10 @@ compinit -u
 autoload -U colors
 colors
 zstyle ':completion:*' show-ambiguity "1;$color[fg-red]"
+# Enable Ctrl-x-e to edit command line
+# - https://nuclearsquid.com/writings/edit-long-commands/
+# - https://unix.stackexchange.com/questions/6620/how-to-edit-command-line-in-full-screen-editor-in-zsh
+autoload -U edit-command-line
 
 PATH="/Users/joe/perl5/bin${PATH+:}${PATH}"; export PATH;
 PERL5LIB="/Users/joe/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
