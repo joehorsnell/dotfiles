@@ -23,7 +23,7 @@ brew "python3"
 
 brew "vim"
 
-brew "postgresql", restart_service: true
+brew "postgresql", restart_service: false
 brew "redis", restart_service: true
 brew "elasticsearch", restart_service: true
 brew "mysql", restart_service: true
