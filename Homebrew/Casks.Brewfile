@@ -23,6 +23,7 @@ cask 'docker-toolbox'
 cask 'java'
 cask 'java6'
 cask 'wireshark'
+cask "gitup"
 
 # Utilities
 cask 'karabiner'

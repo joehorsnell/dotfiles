@@ -5,6 +5,7 @@ brew "zsh-lovers"
 
 brew "fzf"
 brew "git"
+brew "gitup"
 brew "tig"
 brew "diff-so-fancy"
 
