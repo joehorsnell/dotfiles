@@ -32,6 +32,7 @@ brew "awscli"
 brew "chromedriver"
 brew "pgcli"
 brew "psql2csv"
+brew "circleci"
 
 # Misc utils
 brew "tree"
