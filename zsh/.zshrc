@@ -196,6 +196,7 @@ alias igrep='grep -i'
 alias fbr='git branch -a | fzf | sed "s/*//"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
+alias ta='tree -a'
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 zmodload zsh/complist
@@ -217,3 +218,8 @@ PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f ~/.bamboorc ] && source ~/.bamboorc
+
+# added by travis gem
+[ -f /Users/joe/.travis/travis.sh ] && source /Users/joe/.travis/travis.sh
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
