@@ -193,7 +193,7 @@ alias pwgen='nocorrect pwgen'
 alias tc='truecrypt -t'
 alias igrep='grep -i'
 # Juzl's fzf/git aliases
-alias fbr='git branch -a | fzf | sed "s/*//"'
+alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
 alias ta='tree -a'
