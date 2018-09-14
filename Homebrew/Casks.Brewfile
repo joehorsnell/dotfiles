@@ -4,6 +4,7 @@ cask '1password'
 cask 'alfred'
 cask 'google-chrome'
 cask 'firefox'
+cask 'mailspring'
 
 # Development
 cask 'iterm2'
