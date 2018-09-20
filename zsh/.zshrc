@@ -80,10 +80,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
+export SUBL_EDITOR='subl -n -w'
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='subl -n -w'
+  export EDITOR=$SUBL_EDITOR
 fi
 
 HISTSIZE=10000000
