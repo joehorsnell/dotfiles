@@ -124,12 +124,12 @@ export GOPATH=$HOME/code/go
 export PATH=/usr/local/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH"
-export PATH="$(brew --prefix qt@5.5)/bin:$PATH"
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 export BANCO=~/code/gh/firstbanco
 export PASSWORD_STORE_DIR=.
 # GIT_OPTIONAL_LOCKS=0 fixes https://github.com/kemayo/sublime-text-git/issues/467
 export GIT_OPTIONAL_LOCKS=0
+
 if [[ -f "$1" ]]; then
   export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.homebrew-github-access-token)
 fi
