@@ -227,3 +227,4 @@ PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+fortune
