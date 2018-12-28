@@ -2,6 +2,7 @@ brew "zsh"
 brew "bash"
 brew "zsh-completions"
 brew "zsh-lovers"
+brew "fortune"
 
 brew "fzf"
 brew "git"
