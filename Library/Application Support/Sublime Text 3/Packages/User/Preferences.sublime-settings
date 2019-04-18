@@ -1,23 +1,30 @@
 {
 	"bold_folder_labels": true,
 	"caret_style": "wide",
-	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/Monokai (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_GB.dic",
 	"fade_fold_buttons": false,
+	"file_exclude_patterns":
+	[
+		"*.sqllog"
+	],
 	"folder_exclude_patterns":
 	[
 		"node_modules",
 		".svn",
 		".git",
 		".hg",
-		"CVS"
+		"CVS",
+		"tmp",
+		"tmp/cache",
+		"bootsnap-compile-cache",
+		".data"
 	],
 	"font_size": 12,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"SublimeGit",
 		"Vintage"
 	],
 	"reveal-on-activate": true,

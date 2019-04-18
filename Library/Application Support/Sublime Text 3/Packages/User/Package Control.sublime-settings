@@ -6,18 +6,24 @@
 	"installed_packages":
 	[
 		"BeautifyRuby",
-		"Git",
 		"Git Config",
-		"GitSavvy",
 		"Indent XML",
 		"Package Control",
+		"Pretty JSON",
 		"RuboCop",
 		"RubyTest",
 		"RubyToggleString",
-		"SublimeGit",
+		"Search in Project",
+		"sublime-rufo",
 		"SublimeLinter",
 		"SublimeLinter-rubocop",
 		"SyncedSideBar",
+		"SyncedSidebarBg",
+		"TestRSpec",
 		"Zen Tabs"
+	],
+	"repositories":
+	[
+		"https://github.com/ruby-formatter/sublime-rufo"
 	]
 }
