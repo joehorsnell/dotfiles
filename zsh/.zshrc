@@ -199,6 +199,7 @@ alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
 alias ta='tree -a'
+alias rgh='function _rgh() { rg "$1" --glob ''~/Dropbox/dev/backup/.zsh_history.*''; };_rgh'
 
 zmodload zsh/complist
 autoload -U compinit
@@ -225,6 +226,12 @@ PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH"
+
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
 fortune

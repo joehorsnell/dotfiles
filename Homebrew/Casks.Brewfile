@@ -2,6 +2,7 @@
 cask 'dropbox'
 cask '1password'
 cask 'alfred'
+cask 'google-backup-and-sync'
 cask 'google-chrome'
 cask 'firefox'
 cask 'mailspring'
