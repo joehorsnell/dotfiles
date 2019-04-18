@@ -123,7 +123,6 @@ export JAVA_HOME=$JAVA_8_HOME
 export GOPATH=$HOME/code/go
 export PATH=/usr/local/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
-export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH"
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 export BANCO=~/code/gh/firstbanco
 export PASSWORD_STORE_DIR=.
@@ -200,7 +199,6 @@ alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
 alias ta='tree -a'
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 zmodload zsh/complist
 autoload -U compinit
@@ -227,4 +225,6 @@ PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH"
 fortune
