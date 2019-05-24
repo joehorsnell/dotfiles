@@ -45,6 +45,7 @@ brew "htop"
 brew "nmap"
 brew "bat"
 brew "stow"
+brew "mackup"
 
 # brew "htop-osx"
 brew "ascii"
