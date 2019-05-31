@@ -31,7 +31,7 @@ cask "gitup"
 cask 'karabiner'
 cask 'karabiner-elements'
 cask 'daisydisk'
-cask 'istat-menus'
+cask 'istat-menus5'
 cask 'keka'
 cask 'cryptomator'
 cask 'cyberduck'
