@@ -119,12 +119,13 @@ export ANACONDA_HOME=$HOME/anaconda
 export MYSQL_HOME=/usr/local/mysql
 export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/
 export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/
-export JAVA_HOME=$JAVA_8_HOME
+export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
+export JAVA_HOME=$JAVA_11_HOME
 export GOPATH=$HOME/code/go
 export PATH=/usr/local/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
-export BANCO=~/code/gh/firstbanco
+export BANCO=~/code/gh/bambooengineering
 export PASSWORD_STORE_DIR=.
 # GIT_OPTIONAL_LOCKS=0 fixes https://github.com/kemayo/sublime-text-git/issues/467
 export GIT_OPTIONAL_LOCKS=0
@@ -219,19 +220,18 @@ PERL_MB_OPT="--install_base \"/Users/joe/perl5\""; export PERL_MB_OPT;
 PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-[ -f ~/.bamboorc ] && source ~/.bamboorc
 
 # added by travis gem
 [ -f /Users/joe/.travis/travis.sh ] && source /Users/joe/.travis/travis.sh
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-export PATH="$HOME/.rbenv/bin:$HOME/.umbrella/bin:$GOPATH/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
 
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
 
 fortune
+source "$HOME/.config/bamboo/bamboo_rc"
