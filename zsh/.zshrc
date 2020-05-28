@@ -238,9 +238,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
-# if command -v pyenv 1>/dev/null 2>&1; then
-#   eval "$(pyenv init -)"
-# fi
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
 
 if command -v fortune 1>/dev/null 2>&1; then
   fortune
