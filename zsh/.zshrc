@@ -210,7 +210,7 @@ alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
 alias ta='tree -a'
-alias rgh='function _rgh() { rg "$1" --glob ''~/Dropbox/dev/backup/.zsh_history.*''; };_rgh'
+alias rgh='function _rgh() { rg "$@" --glob ''~/Dropbox/dev/backup/.zsh_history.*''; };_rgh'
 
 zmodload zsh/complist
 autoload -U compinit
