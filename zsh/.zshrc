@@ -245,4 +245,5 @@ fi
 if command -v fortune 1>/dev/null 2>&1; then
   fortune
 fi
-source "$HOME/.config/bamboo/bamboo_rc"
+
+. "$HOME/.config/bamboo/bamboo_rc"
