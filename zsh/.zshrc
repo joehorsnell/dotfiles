@@ -209,7 +209,11 @@ alias igrep='grep -i'
 alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
-alias ta='tree -a'
+alias et='exa --tree'
+alias ta='et -a'
+alias t1='et --level=1'
+alias t2='et --level=2'
+alias t3='et --level=3'
 alias rgh='function _rgh() { rg "$@" --glob ''~/Dropbox/dev/backup/.zsh_history.*''; };_rgh'
 
 zmodload zsh/complist
