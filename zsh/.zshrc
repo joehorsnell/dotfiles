@@ -99,7 +99,7 @@ fi
 
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTFILE=~/Dropbox/dev/backup/.zsh_history.$HOST
+HISTFILE=~/Dropbox/dev/backup/.zsh_history.$(scutil --get LocalHostName).local
 
 # gpg-agent
 #local GPG_ENV=$HOME/.gnupg/gpg-agent.env
