@@ -137,6 +137,7 @@ export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/share/python:/opt/local/bin:
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
 export BANCO=~/code/gh/bambooengineering
 export PASSWORD_STORE_DIR=.
+export RIPGREP_CONFIG_PATH=~/.ripgreprc
 # GIT_OPTIONAL_LOCKS=0 fixes https://github.com/kemayo/sublime-text-git/issues/467
 export GIT_OPTIONAL_LOCKS=0
 
