@@ -90,11 +90,14 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-export SUBL_EDITOR='subl -n -w'
+export SUBL_EDITOR='subl --new-window --wait'
+export VSCODE_EDITOR='code --new-window --wait'
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
+  export GIT_EDITOR='vim'
 else
-  export EDITOR=$SUBL_EDITOR
+  export EDITOR=$VSCODE_EDITOR
+  export GIT_EDITOR=$VSCODE_EDITOR
 fi
 
 HISTSIZE=10000000
