@@ -1,3 +1,5 @@
 \set COMP_KEYWORD_CASE upper
+\set HISTCONTROL ignoredups
+\pset null '¤'
+\timing on
 \x auto
-\pset null ¤
