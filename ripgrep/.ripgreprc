@@ -1,5 +1,5 @@
 # To install use `stow ripgrep --target ~/` from the root of the dotfiles repo
 
 # Don't let ripgrep vomit really long lines to my terminal, and show a preview.
---max-columns=100
+--max-columns=120
 --max-columns-preview
