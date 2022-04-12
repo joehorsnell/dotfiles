@@ -69,18 +69,12 @@ source_file_if_exists () {
     [[ -f "$1" ]] && source "$1"
 }
 
-function ze () {
-	zeus $@
-	if [ $? -eq 143 ]
-	then
-	  reset
-	  echo ‘########################################################’
-	  echo ‘Caught a zeus error, reset terminal and now retrying...’
-	  ze $@
-	fi
-}
+source_file_if_exists $ZSH/oh-my-zsh.sh
 
-source $ZSH/oh-my-zsh.sh
+for conf in "$HOME/.dotfiles/zsh/config/"*.zsh; do
+  source "${conf}"
+done
+unset conf
 
 # User configuration
 
@@ -138,7 +132,6 @@ export GOPATH=$HOME/code/go
 export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export DYLD_LIBRARY_PATH="/usr/local/mysql/lib:$DYLD_LIBRARY_PATH"
-export BANCO=~/code/gh/bambooengineering
 export PASSWORD_STORE_DIR=.
 export RIPGREP_CONFIG_PATH=~/.ripgreprc
 # GIT_OPTIONAL_LOCKS=0 fixes https://github.com/kemayo/sublime-text-git/issues/467
@@ -152,73 +145,11 @@ fi
 export PGOPTIONS="-c statement_timeout=10000000"
 # The long form of -FXR
 export LESS='--quit-if-one-screen --no-init --RAW-CONTROL-CHARS'
-export PROD_DEPLOYS=~/Dropbox\ \(Bamboo\ Limited\)/Department\ Development/Production\ Deploys/
 
-source_file_if_exists ~/.vostron.env
 #source ~/.aws_env
 #source ~/.aws_cred
 #source ~/.opscode_env
 mkdir -p ~/.ssh/sockets
-
-alias h=history
-
-# Zeus
-alias z=ze
-alias zg='z generate'
-alias zgm='zg migration'
-alias zst='z start'
-alias zs='z spec'
-alias zss='z spec spec'
-alias zr='zeus rake'
-alias zrdm='zr db:migrate'
-alias zrdms='zr db:migrate:status'
-alias zrdr='zr db:rollback'
-alias zrdtp='zr db:test:prepare'
-
-# Tig
-alias ts='tig status'
-
-# Spring
-alias s=spring
-alias sg='s generate'
-alias sgm='sg migration'
-alias ss='s spec'
-alias srs='s rspec'
-alias sr='s rake'
-alias srdm='sr db:migrate'
-alias srdms='sr db:migrate:status'
-alias srdr='sr db:rollback'
-alias srdtp='sr db:test:prepare'
-
-alias lt='ll -tr'
-alias netstat_osx="sudo lsof -i -P"
-alias fb='cd $BANCO'
-alias um='cd $BANCO/umbrella'
-alias um2='cd $BANCO/umbrella2'
-alias um3='cd $BANCO/umbrella3'
-alias gf='g fetch'
-alias gr='git rev-parse --show-toplevel'
-alias cdgr='cd "$(gr)"'
-alias gsu='git submodule update'
-alias gst='git st'
-alias rgfa='rake git:fetch:all'
-alias rgma='rake git:merge:all'
-alias rgla='rake git:pull:all'
-alias rgpa='rake git:push:all'
-alias st='nocorrect stree'
-alias pwgen='nocorrect pwgen'
-alias tc='truecrypt -t'
-alias igrep='grep -i'
-# Juzl's fzf/git aliases
-alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
-alias fbc='fbr | pbcopy'
-alias fco='fbr | xargs git checkout'
-alias et='exa --tree'
-alias ta='et -a'
-alias t1='et --level=1'
-alias t2='et --level=2'
-alias t3='et --level=3'
-alias rgh='function _rgh() { rg "$@" --glob ''~/Dropbox/dev/backup/.zsh_history.*''; };_rgh'
 
 zmodload zsh/complist
 autoload -U compinit
@@ -253,5 +184,3 @@ fi
 if command -v fortune 1>/dev/null 2>&1; then
   fortune
 fi
-
-. "$HOME/.config/bamboo/bamboo_rc"
