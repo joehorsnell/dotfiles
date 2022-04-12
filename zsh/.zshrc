@@ -139,7 +139,3 @@ export PATH="$GOPATH/bin:$PATH"
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
 fi
-
-if command -v fortune 1>/dev/null 2>&1; then
-  fortune
-fi
