@@ -13,7 +13,6 @@ alias gsu='git submodule update'
 alias gst='git status'
 alias st='nocorrect stree'
 alias pwgen='nocorrect pwgen'
-alias tc='truecrypt -t'
 alias igrep='grep -i'
 # Juzl's fzf/git aliases
 alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'

@@ -8,8 +8,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes or in ~/.oh-my-zsh/themes/
 ZSH_THEME="robbyrussell"
-#ZSH_THEME="robharrop"
-#ZSH_THEME="intheloop"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -98,34 +96,7 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/Dropbox/dev/backup/.zsh_history.$(scutil --get LocalHostName).local
 
-# gpg-agent
-#local GPG_ENV=$HOME/.gnupg/gpg-agent.env
-#function start_agent {
-#  /usr/bin/env gpg-agent --daemon --write-env-file ${GPG_ENV} > /dev/null
-#  chmod 600 ${GPG_ENV}
-#  . ${GPG_ENV} > /dev/null
-#}
-## Source GPG agent settings, if applicable
-#if [ -f "${GPG_ENV}" ]; then
-#  . ${GPG_ENV} > /dev/null
-#  GPG_AGENT_DATA=("${(s/:/)GPG_AGENT_INFO}")
-#  GPG_AGENT_PID=$GPG_AGENT_DATA[2]
-#  ps -ef | grep ${GPG_AGENT_PID} | grep gpg-agent > /dev/null || {
-#    start_agent;
-#  }
-#else
-#  start_agent;
-#fi
-#export GPG_AGENT_INFO
-#export GPG_AGENT_PID
-#GPG_TTY=$(tty)
-#export GPG_TTY
-
 # Customize to your needs...
-export ANACONDA_HOME=$HOME/anaconda
-export MYSQL_HOME=/usr/local/mysql
-export JAVA_7_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home/
-export JAVA_8_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/
 export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
 export JAVA_HOME=$JAVA_11_HOME
 export GOPATH=$HOME/code/go
@@ -146,9 +117,6 @@ export PGOPTIONS="-c statement_timeout=10000000"
 # The long form of -FXR
 export LESS='--quit-if-one-screen --no-init --RAW-CONTROL-CHARS'
 
-#source ~/.aws_env
-#source ~/.aws_cred
-#source ~/.opscode_env
 mkdir -p ~/.ssh/sockets
 
 zmodload zsh/complist
@@ -162,16 +130,7 @@ zstyle ':completion:*' show-ambiguity "1;$color[fg-red]"
 # - https://unix.stackexchange.com/questions/6620/how-to-edit-command-line-in-full-screen-editor-in-zsh
 autoload -U edit-command-line
 
-PATH="/Users/joe/perl5/bin${PATH+:}${PATH}"; export PATH;
-PERL5LIB="/Users/joe/perl5/lib/perl5${PERL5LIB+:}${PERL5LIB}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/joe/perl5${PERL_LOCAL_LIB_ROOT+:}${PERL_LOCAL_LIB_ROOT}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/joe/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/joe/perl5"; export PERL_MM_OPT;
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# added by travis gem
-[ -f /Users/joe/.travis/travis.sh ] && source /Users/joe/.travis/travis.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
