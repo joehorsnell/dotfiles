@@ -64,7 +64,11 @@ COMPLETION_WAITING_DOTS="true"
 plugins=(git gem bundler rake brew macos vagrant gpg-agent pass)
 
 source_file_if_exists () {
-    [[ -f "$1" ]] && source "$1"
+  [[ -f "$1" ]] && source "$1"
+}
+
+mkcd () {
+  mkdir -p -- "$1" && cd -P -- "$1"
 }
 
 source_file_if_exists $ZSH/oh-my-zsh.sh
