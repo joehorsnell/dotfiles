@@ -3,7 +3,11 @@ alias h=history
 # Tig
 alias ts='tig status'
 
+alias l='ls --color=auto'
+alias ll='l -l'
+alias la='ll -a'
 alias lt='ll -tr'
+alias lg='lazygit'
 alias netstat_osx="sudo lsof -i -P"
 alias g='git'
 alias gf='g fetch'
@@ -18,7 +22,10 @@ alias igrep='grep -i'
 alias fbr='git branch -a | fzf | sed "s/remotes\/origin\///"'
 alias fbc='fbr | pbcopy'
 alias fco='fbr | xargs git checkout'
-alias et='exa --tree'
+alias e='exa -l'
+alias ea='e -a'
+alias etr='exa --tree'
+alias et='ea --sort new'
 alias ta='et -a'
 alias t1='et --level=1'
 alias t2='et --level=2'
