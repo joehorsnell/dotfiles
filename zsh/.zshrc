@@ -96,6 +96,7 @@ else
   export GIT_EDITOR=$VSCODE_EDITOR
 fi
 
+# History
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/Dropbox/dev/backup/.zsh_history.$(scutil --get LocalHostName).local
@@ -142,4 +143,8 @@ export PATH="$GOPATH/bin:$PATH"
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
+fi
+
+if command -v starship 1>/dev/null 2>&1; then
+  eval "$(starship init zsh)"
 fi
