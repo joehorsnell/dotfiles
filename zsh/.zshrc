@@ -92,8 +92,8 @@ if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
   export GIT_EDITOR='vim'
 else
-  export EDITOR=$VSCODE_EDITOR
-  export GIT_EDITOR=$VSCODE_EDITOR
+  export EDITOR=$SUBL_EDITOR
+  export GIT_EDITOR=$SUBL_EDITOR
 fi
 
 # History
@@ -156,3 +156,22 @@ fi
 if [[ -d "$HOME/.okta/bin" && ":$PATH:" != *":$HOME/.okta/bin:"* ]]; then
     PATH="$HOME/.okta/bin:$PATH"
 fi
+
+if command -v fortune 1>/dev/null 2>&1; then
+  fortune
+fi
+
+# . "$HOME/.config/bamboo/bamboo_rc"
+eval "$(rbenv init -)"
+
+if [ -e /Users/joe/.nix-profile/etc/profile.d/nix.sh ]; then . /Users/joe/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# [[ -s "/Users/joe/.config/bitso/bitso_rc" ]] && source "/Users/joe/.config/bitso/bitso_rc"
+
+# [[ -s "$HOME/.config/bitso/bitso_rc" ]] && source "$HOME/.config/bitso/bitso_rc"
+
+[[ -s "/usr/local/opt/asdf/asdf.sh" ]] && source "/usr/local/opt/asdf/asdf.sh"
+
+[[ -s "$HOME/.config/bitso/bitso_rc" ]] && source "$HOME/.config/bitso/bitso_rc"
