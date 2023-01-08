@@ -2,7 +2,9 @@ My configuration files.
 
 # Initial setup
 
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/joehorsnell/dotfiles/HEAD/init.sh)"
+```
 
 # Per-machine setup
 
