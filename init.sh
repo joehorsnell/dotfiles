@@ -12,7 +12,7 @@ install_homebrew_if_required() {
 
 install_required_packages() {
   # TODO - move this to a Brewfile
-  declare -a packages=("fzf" "stow")
+  declare -a packages=("curl" "fzf" "git" "stow")
   for package in "${packages[@]}"
   do
     if command -v "${package}" >/dev/null 2>&1; then
@@ -24,18 +24,24 @@ install_required_packages() {
   done
 }
 
+stow_packages() {
+  declare -a packages=("asdf" "mackup" "psql" "ripgrep" "zsh")
+  for package in "${packages[@]}"
+  do
+    echo "stowing package ${package}"
+    stow --dir="${dir}" --target ~/ "${package}"
+  done
+}
+
+clone_dotfiles_if_required() {
+  [ ! -d ~/.dotfiles ] && git clone https://github.com/joehorsnell/dotfiles.git ~/.dotfiles
+}
+
 install_homebrew_if_required
 install_required_packages
+clone_dotfiles_if_required
 
 dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-# stow packages
-declare -a packages=("asdf" "mackup" "psql" "ripgrep" "zsh")
-for package in "${packages[@]}"
-do
-   echo "stowing package ${package}"
-   stow --dir="${dir}" --target ~/ "${package}"
-done
 
 # fzf config
 # Note: we know that the required config is already in zsh, so use --no-update-rc
