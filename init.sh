@@ -42,13 +42,12 @@ stow_packages() {
   done
 }
 
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
 install_homebrew
 install_required_packages
 install_fzf_config
 clone_dotfiles
 
+# dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # (cd ~/.dotfiles && stow_packages)
 
 exit 0
