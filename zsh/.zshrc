@@ -136,6 +136,7 @@ zstyle ':completion:*' show-ambiguity "1;$color[fg-red]"
 autoload -U edit-command-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
