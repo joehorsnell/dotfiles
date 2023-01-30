@@ -1,0 +1,22 @@
+tap "homebrew/cask-versions"
+
+brew "bash"
+brew "bat"
+brew "curl"
+brew "exa"
+brew "fd"
+brew "fzf"
+brew "git"
+brew "mas" # mas-cli, to install from the App Store
+brew "starship"
+brew "stow"
+brew "zsh"
+
+cask "1password7"
+cask "alfred"
+cask "dropbox"
+cask "visual-studio-code"
+cask "whatsapp"
+cask "zoom"
+
+mas "Things 3", id: 904280696
