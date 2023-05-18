@@ -136,15 +136,17 @@ zstyle ':completion:*' show-ambiguity "1;$color[fg-red]"
 autoload -U edit-command-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Config for Homebrew on Apple Silicon
 [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
 
 if command -v asdf 1>/dev/null 2>&1; then
   . /usr/local/opt/asdf/libexec/asdf.sh
 fi
 
-export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-export PATH="$GOPATH/bin:$PATH"
+if command -v atuin 1>/dev/null 2>&1; then
+  eval "$(atuin init zsh)"
+fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -154,9 +156,11 @@ if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
-if command -v atuin 1>/dev/null 2>&1; then
-  eval "$(atuin init zsh)"
-fi
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="$GOPATH/bin:$PATH"
+
+
 
 #OktaAWSCLI
 if [[ -f "$HOME/.okta/bash_functions" ]]; then

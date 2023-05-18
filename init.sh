@@ -8,6 +8,7 @@ install_homebrew() {
     echo "Installing Homebrew 🍺"
     # Install stanza from https://brew.sh
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
   fi
 }
 
