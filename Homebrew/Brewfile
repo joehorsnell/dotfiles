@@ -1,5 +1,6 @@
 tap "homebrew/cask-versions"
 
+brew "atuin"
 brew "bash"
 brew "bat"
 brew "curl"
