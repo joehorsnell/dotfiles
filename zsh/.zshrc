@@ -141,7 +141,7 @@ autoload -U edit-command-line
 [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
 
 if command -v asdf 1>/dev/null 2>&1; then
-  . /usr/local/opt/asdf/libexec/asdf.sh
+  [ -f "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh" ] && source "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
 fi
 
 if command -v atuin 1>/dev/null 2>&1; then
