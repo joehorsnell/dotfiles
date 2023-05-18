@@ -2,6 +2,8 @@
 set -euo pipefail
 
 install_homebrew() {
+  [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
+
   if command -v brew >/dev/null 2>&1; then
     echo "Homebrew already installed 👍"
   else
@@ -69,7 +71,7 @@ install_fzf_config
 install_ohmyzsh
 clone_dotfiles
 
-dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+# dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 (cd ~/.dotfiles && stow_packages)
 
 exit 0
