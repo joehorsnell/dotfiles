@@ -12,6 +12,7 @@ install_homebrew() {
 }
 
 install_required_packages() {
+  # TODO - move this to a Brewfile
   declare -a packages=("curl" "fzf" "git" "stow")
   for package in "${packages[@]}"
   do
