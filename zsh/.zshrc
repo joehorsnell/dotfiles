@@ -138,6 +138,10 @@ autoload -U edit-command-line
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
 
+if command -v asdf 1>/dev/null 2>&1; then
+  . /usr/local/opt/asdf/libexec/asdf.sh
+fi
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"

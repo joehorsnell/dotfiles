@@ -26,16 +26,35 @@ install_required_packages() {
 }
 
 install_fzf_config() {
-  # Note: we know that the required config is already in zsh, so use --no-update-rc
-  [ ! -f ~/.fzf.zsh ] && $(brew --prefix)/opt/fzf/install --no-update-rc --key-bindings --completion
+  if [ ! -f ~/.fzf.zsh ]; then
+    echo "Installing fzf config"
+    # Note: we know that the required config is already in zsh, so use --no-update-rc
+    "$(brew --prefix)/opt/fzf/install" --no-update-rc --key-bindings --completion
+  else
+    echo "fzf config already installed 👍"
+  fi
+}
+
+install_ohmyzsh() {
+  if [ ! -d ~/.oh-my-zsh ]; then
+    echo "Installing oh-my-zsh"
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)" "" --skip-chsh --unattended --keep-zshrc
+  else
+    echo "oh-my-zsh config already installed 👍"
+  fi
 }
 
 clone_dotfiles() {
-  [ ! -d ~/.dotfiles ] && git clone https://github.com/joehorsnell/dotfiles.git ~/.dotfiles
+  if [ ! -d ~/.dotfiles ]; then
+    echo "Cloning dotfiles"
+    git clone https://github.com/joehorsnell/dotfiles.git ~/.dotfiles
+  else
+    echo "dotfiles already cloned 👍"
+  fi
 }
 
 stow_packages() {
-  declare -a packages=("asdf" "mackup" "psql" "ripgrep" "zsh")
+  declare -a packages=("asdf" "Homebrew" "mackup" "psql" "ripgrep" "zsh")
   for package in "${packages[@]}"
   do
     echo "stowing package ${package}"
@@ -46,9 +65,10 @@ stow_packages() {
 install_homebrew
 install_required_packages
 install_fzf_config
+install_ohmyzsh
 clone_dotfiles
 
-# dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-# (cd ~/.dotfiles && stow_packages)
+dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+(cd ~/.dotfiles && stow_packages)
 
 exit 0
