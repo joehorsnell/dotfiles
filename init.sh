@@ -42,8 +42,8 @@ install_ohmyzsh() {
   if [ ! -d ~/.oh-my-zsh ]; then
     echo "Installing oh-my-zsh"
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/HEAD/tools/install.sh)" "" --skip-chsh --unattended --keep-zshrc
-    if [[ ! -L "~/.zshrc" ]]; then
-      echo "Deleting default .zshrc config added by oh-my-zsh"
+    if [[ ! -L ~/.zshrc ]]; then
+      echo "Deleting default .zshrc config added by oh-my-zsh installer"
       rm ~/.zshrc
     fi
   else
