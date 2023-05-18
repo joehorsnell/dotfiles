@@ -61,7 +61,7 @@ stow_packages() {
   for package in "${packages[@]}"
   do
     echo "stowing package ${package}"
-    stow --dir="${dir}" --target ~/ "${package}"
+    stow --target ~/ "${package}"
   done
 }
 
@@ -71,7 +71,6 @@ install_fzf_config
 install_ohmyzsh
 clone_dotfiles
 
-# dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 (cd ~/.dotfiles && stow_packages)
 
 exit 0
