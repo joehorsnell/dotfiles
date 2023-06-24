@@ -145,7 +145,8 @@ if command -v asdf 1>/dev/null 2>&1; then
 fi
 
 if command -v atuin 1>/dev/null 2>&1; then
-  eval "$(atuin init zsh)"
+  # https://atuin.sh/docs/key-binding
+  eval "$(atuin init zsh --disable-up-arrow)"
 fi
 
 if command -v pyenv 1>/dev/null 2>&1; then
