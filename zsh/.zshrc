@@ -157,6 +157,11 @@ if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+export AWS_CLI_AUTO_PROMPT=on
+if command -v aws_completer 1>/dev/null 2>&1; then
+  complete -C 'aws_completer' aws
+fi
+
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
