@@ -157,7 +157,9 @@ if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html
 export AWS_CLI_AUTO_PROMPT=on
+# https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
 if command -v aws_completer 1>/dev/null 2>&1; then
   complete -C 'aws_completer' aws
 fi
