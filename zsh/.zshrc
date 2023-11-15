@@ -158,7 +158,7 @@ fi
 [ -d "/opt/homebrew/opt/curl/bin" ] && export PATH="/opt/homebrew/opt/curl/bin:$PATH"
 
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html
-export AWS_CLI_AUTO_PROMPT=on
+export AWS_CLI_AUTO_PROMPT=on-partial
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
 if command -v aws_completer 1>/dev/null 2>&1; then
   complete -C 'aws_completer' aws
