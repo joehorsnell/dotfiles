@@ -102,8 +102,6 @@ SAVEHIST=10000000
 HISTFILE=~/Dropbox/dev/backup/.zsh_history.$(scutil --get LocalHostName).local
 
 # Customize to your needs...
-export JAVA_11_HOME=/Library/Java/JavaVirtualMachines/openjdk-11.0.2.jdk/Contents/Home/
-export JAVA_HOME=$JAVA_11_HOME
 export GOPATH=$HOME/code/go
 export PATH=/usr/local/bin:/bin:/usr/bin:/usr/local/share/python:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
 #export PATH=/usr/local/bin:/opt/local/bin:/usr/local/sbin:$MYSQL_HOME/bin:~/bin:~/pear/bin:$PATH
