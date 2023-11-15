@@ -155,6 +155,8 @@ if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+[ -d "/opt/homebrew/opt/curl/bin" ] && export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html
 export AWS_CLI_AUTO_PROMPT=on
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-completion.html
