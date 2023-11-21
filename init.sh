@@ -51,6 +51,24 @@ install_ohmyzsh() {
   fi
 }
 
+clone_jq_zsh_plugin_repo() {
+  if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/jq ]; then
+    echo "Cloning jq-zsh-plugin repo"
+    git clone https://github.com/reegnz/jq-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/jq
+  else
+    echo "jq-zsh-plugin repo already cloned"
+  fi
+}
+
+clone_zsh_autosuggestions_repo() {
+  if [ ! -d ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions ]; then
+    echo "Cloning zsh-autosuggestions repo"
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  else
+    echo "zsh-autosuggestions repo already cloned"
+  fi
+}
+
 clone_dotfiles() {
   if [ ! -d ~/.dotfiles ]; then
     echo "Cloning dotfiles"
@@ -73,6 +91,8 @@ install_homebrew
 install_required_packages
 install_fzf_config
 install_ohmyzsh
+clone_jq_zsh_plugin_repo
+clone_zsh_autosuggestions_repo
 clone_dotfiles
 
 (cd ~/.dotfiles && stow_packages)
