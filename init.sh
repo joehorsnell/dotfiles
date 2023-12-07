@@ -79,7 +79,7 @@ clone_dotfiles() {
 }
 
 stow_packages() {
-  declare -a packages=("asdf" "atuin" "Homebrew" "mackup" "psql" "ripgrep" "zsh")
+  declare -a packages=("asdf" "atuin" "Homebrew" "mackup" "psql" "ripgrep" "rubocop" "zsh")
   for package in "${packages[@]}"
   do
     echo "stowing package ${package}"
