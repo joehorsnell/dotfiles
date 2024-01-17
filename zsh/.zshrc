@@ -167,8 +167,7 @@ fi
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
-
-
+export PATH="$HOME/.rd/bin:$PATH" # Rancher Desktop
 
 #OktaAWSCLI
 if [[ -f "$HOME/.okta/bash_functions" ]]; then
