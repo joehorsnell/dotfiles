@@ -5,5 +5,6 @@
 	short = true
 
 [alias]
-    codb = !git checkout $(git db)
-    db = !git symbolic-ref refs/remotes/origin/HEAD --short | cut -d \"/\" -f 2
+	gr = rev-parse --show-toplevel
+	codb = !git checkout "$(git db)"
+	db = !git symbolic-ref refs/remotes/origin/HEAD --short | cut -d \"/\" -f 2
