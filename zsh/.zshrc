@@ -155,7 +155,16 @@ if command -v starship 1>/dev/null 2>&1; then
   eval "$(starship init zsh)"
 fi
 
+if command -v telepresence 1>/dev/null 2>&1; then
+  eval "$(telepresence completion zsh)"
+fi
+
+if command -v kubectl 1>/dev/null 2>&1; then
+  eval "$(kubectl completion zsh)"
+fi
+
 [ -d "/opt/homebrew/opt/curl/bin" ] && export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+[ -d "/opt/homebrew/opt/postgresql@16/bin" ] && export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
 
 # https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-parameters-prompting.html
 export AWS_CLI_AUTO_PROMPT=on-partial
@@ -176,3 +185,18 @@ fi
 if [[ -d "$HOME/.okta/bin" && ":$PATH:" != *":$HOME/.okta/bin:"* ]]; then
     PATH="$HOME/.okta/bin:$PATH"
 fi
+
+# GITHUB_ACTOR and GITHUB_TOKEN
+# export GITHUB_TOKEN="op://Private/sadxcbiknzgcvcsuqkbgh7mwyq/Personal"
+export GITHUB_ACTOR="op://Private/sadxcbiknzgcvcsuqkbgh7mwyq/Username"
+export GITHUB_TOKEN="op://Private/sadxcbiknzgcvcsuqkbgh7mwyq/Bitso PAT 2024"
+
+# Rancher Desktop/Testcontainers
+# export DOCKER_HOST=unix://$HOME/.rd/docker.sock
+# export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock
+# export TESTCONTAINERS_HOST_OVERRIDE=$(rdctl shell ip a show vznat | awk '/inet / {sub("/.*",""); print $2}')
+
+# Bitso stuff to remove
+# export AWS_CA_BUNDLE=~/Dropbox/Bitso/ZscalerRootCertificate-2048-SHA256.crt
+# export NODE_EXTRA_CA_CERTS=~/Dropbox/Bitso/ZscalerRootCertificate-2048-SHA256.crt
+
