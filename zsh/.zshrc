@@ -1,3 +1,5 @@
+# zmodload zsh/zprof
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -200,3 +202,4 @@ export GITHUB_TOKEN="op://Private/sadxcbiknzgcvcsuqkbgh7mwyq/Bitso PAT 2024"
 # export AWS_CA_BUNDLE=~/Dropbox/Bitso/ZscalerRootCertificate-2048-SHA256.crt
 # export NODE_EXTRA_CA_CERTS=~/Dropbox/Bitso/ZscalerRootCertificate-2048-SHA256.crt
 
+# zprof
