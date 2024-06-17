@@ -144,17 +144,9 @@ if command -v mise 1>/dev/null 2>&1; then
   eval "$(mise activate zsh)"
 fi
 
-# if command -v asdf 1>/dev/null 2>&1; then
-#   [ -f "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh" ] && source "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
-# fi
-
 if command -v atuin 1>/dev/null 2>&1; then
   # https://atuin.sh/docs/key-binding
   eval "$(atuin init zsh --disable-up-arrow)"
-fi
-
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
 fi
 
 if command -v starship 1>/dev/null 2>&1; then
