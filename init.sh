@@ -56,7 +56,7 @@ clone_jq_zsh_plugin_repo() {
     echo "Cloning jq-zsh-plugin repo"
     git clone https://github.com/reegnz/jq-zsh-plugin.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/jq
   else
-    echo "jq-zsh-plugin repo already cloned"
+    echo "jq-zsh-plugin repo already cloned 👍"
   fi
 }
 
@@ -65,7 +65,7 @@ clone_zsh_autosuggestions_repo() {
     echo "Cloning zsh-autosuggestions repo"
     git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   else
-    echo "zsh-autosuggestions repo already cloned"
+    echo "zsh-autosuggestions repo already cloned 👍"
   fi
 }
 
@@ -79,7 +79,7 @@ clone_dotfiles() {
 }
 
 stow_packages() {
-  declare -a packages=("asdf" "atuin" "bat" "git" "Homebrew" "mackup" "psql" "ripgrep" "rubocop" "zsh")
+  declare -a packages=("asdf" "atuin" "bash" "bat" "fish" "git" "Homebrew" "mackup" "psql" "ripgrep" "rubocop" "zsh")
   for package in "${packages[@]}"
   do
     echo "stowing package ${package}"

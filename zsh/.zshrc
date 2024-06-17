@@ -140,9 +140,13 @@ autoload -U edit-command-line
 # Config for Homebrew on Apple Silicon
 [ -f /opt/homebrew/bin/brew ] && eval $(/opt/homebrew/bin/brew shellenv)
 
-if command -v asdf 1>/dev/null 2>&1; then
-  [ -f "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh" ] && source "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
+if command -v mise 1>/dev/null 2>&1; then
+  eval "$(mise activate zsh)"
 fi
+
+# if command -v asdf 1>/dev/null 2>&1; then
+#   [ -f "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh" ] && source "${HOMEBREW_PREFIX}/opt/asdf/libexec/asdf.sh"
+# fi
 
 if command -v atuin 1>/dev/null 2>&1; then
   # https://atuin.sh/docs/key-binding
